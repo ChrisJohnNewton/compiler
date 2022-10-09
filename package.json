@@ -1,6 +1,15 @@
 {
   "name": "@chrisjohnnewton/compiler",
-  "version": "1.0.0",
+  "version": "1.1.0",
+  "author": "Chris Newton",
+  "keywords": [
+    "compiler",
+    "compile",
+    "chrisjohnnewton"
+  ],
   "license": "MIT",
-  "repository": "ChrisJohnNewton/compiler"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisJohnNewton/compiler.git"
+  }
 }
