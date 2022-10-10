@@ -1,15 +1,61 @@
 {
   "name": "@chrisjohnnewton/compiler",
   "version": "1.1.0",
+  "description": "An efficient compiler for static websites",
   "author": "Chris Newton",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "imports": {
+    "#root/*": "./*",
+    "#general/*": "./lib/general/*",
+    "#posts/*": "./lib/posts/*",
+    "#pages/*": "./lib/pages/*"
+  },
+  "scripts": {
+    "push": "git add . && git commit -m \"Push at $(date +'%H:%M') on $(date +'%d-%m-%Y')\" && git push",
+    "build": "clear && node './lib/general/checks.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisJohnNewton/compiler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ChrisJohnNewton/compiler/issues"
+  },
+  "homepage": "https://github.com/ChrisJohnNewton/compiler#readme",
   "keywords": [
     "compiler",
     "compile",
     "chrisjohnnewton"
   ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ChrisJohnNewton/compiler.git"
+  "dependencies": {
+    "@ampproject/toolbox-optimizer": "^2.9.0",
+    "@babel/core": "^7.18.13",
+    "@babel/preset-env": "^7.18.9",
+    "@babel/preset-react": "^7.18.6",
+    "@node-loader/babel": "^2.0.1",
+    "autoprefixer": "^10.4.8",
+    "babel-minify": "^0.5.2",
+    "cssnano": "^5.1.12",
+    "cssnano-preset-advanced": "^5.3.8",
+    "dotenv": "^16.0.3",
+    "gray-matter": "^4.0.3",
+    "hastscript": "^7.0.2",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.4.14",
+    "react-dom": "^18.2.0",
+    "rehype-format": "^4.0.1",
+    "rehype-stringify": "^9.0.3",
+    "remark-directive": "^2.0.1",
+    "remark-gfm": "^3.0.1",
+    "remark-parse": "^10.0.1",
+    "remark-rehype": "^10.1.0",
+    "tailwindcss": "^3.1.8",
+    "unified": "^10.1.2",
+    "unist-util-visit": "^4.1.0"
   }
 }

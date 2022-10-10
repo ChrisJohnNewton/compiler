@@ -1,0 +1,5 @@
+/*
+  This file is used to generate tailwind classes using `npx tailwindcss` without
+  all the boilerplate fluff
+*/
+@tailwind utilities;
