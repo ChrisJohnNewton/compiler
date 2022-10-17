@@ -1,7 +1,10 @@
 export default {
   posts: "./src/posts",
   pages: "./src/pages",
-  tailwind: "./tailwind.config.js",
+  css: {
+    tailwind: "./tailwind.config.js",
+    main: "./src/main.css",
+  },
   log: {
     errors: true,
     warnings: true,
